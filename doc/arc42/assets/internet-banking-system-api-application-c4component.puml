@@ -1,0 +1,32 @@
+@startuml internet-banking-system-api-application-c4component
+!include <C4/C4_Component>
+
+SHOW_PERSON_PORTRAIT()
+LAYOUT_LEFT_RIGHT()
+
+title Internet Banking System API Application
+
+Container(Fincent.C4.PersonController, "Person Controller", "Api", "Person Controller")
+Container(MobileApp, "MobileApp", "Mobile:C#, Xamarin", "Provides a limited subset of the Internet banking functionality to customers via their mobile device")
+ContainerDb(Database, "SqlDatabase", "Database:SQL Database", "Stores user registration information, hashed auth credentials, access logs, etc.")
+System_Ext(Mainframe, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+
+Container_Boundary(c1, "API Application") {
+    Component(sign, "Sign In Controller", "MVC Controller", "Allows users to sign in to the internet banking system")
+    Component(accounts, "Accounts Summary Controller", "MVC Controller", "Provides customers with a summary of their bank accounts")
+    Component(security, "Security Component", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
+    Component(mbsfacade, "Mainframe Banking System Facade", "Spring Bean", "A facade onto the mainframe banking system.")
+}
+
+
+Rel(sign, security, "uses")
+Rel(accounts, mbsfacade, "uses")
+Rel(security, Database, "Read & write to", "JDBC")
+Rel(mbsfacade, Mainframe, "Uses", "XML/HTTPS")
+Rel(Spa, sign, "Uses", "JSON/HTTPS")
+Rel(Spa, accounts, "Uses", "JSON/HTTPS")
+Rel(MobileApp, sign, "Uses", "JSON/HTTPS")
+Rel(MobileApp, accounts, "Uses", "JSON/HTTPS")
+
+SHOW_LEGEND()
+@enduml

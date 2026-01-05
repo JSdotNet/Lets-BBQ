@@ -1,0 +1,17 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.0.2">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <UserSecretsId>85d34cdb-db38-4775-8e58-e84914c25327</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ApiService\Lets-BBQ.ApiService.csproj" />
+    <ProjectReference Include="..\..\src\Web\Lets-BBQ.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.Redis" />
+  </ItemGroup>
+
+</Project>

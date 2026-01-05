@@ -1,0 +1,20 @@
+@startuml sequence-diagram-for-internet-banking-system-c4sequence
+!include <C4/C4_Sequence>
+
+SHOW_PERSON_PORTRAIT()
+
+title Sequence diagram for Internet Banking System
+
+Container(cA, "Single-Page Application", "None:JavaScript and Angular", "Provides all of the Internet banking functionality to customers via their web browser.")
+
+Container_Boundary(b, "Api Application")
+    Component(cB, "Sign In Controller", "Spring MVC Rest Controller", "Allows users to sign in to the Internet Banking System.")
+    Component(cC, "Security Component", "Spring Bean", "Provides functionality Related to signing in, changing passwords, etc.")
+Boundary_End()
+
+ContainerDb(cD, "Database", "Database:Relational Database Schema", "Stores user registration information, hashed authentication credentials, access logs, etc.")
+
+Rel(cA, cB, "Submits credentials to", "JSON/HTTPS")
+Rel(cB, cC, "Calls isAuthenticated() on")
+Rel(cC, cD, "select * from users where username = ?o", "JDBCS")
+@enduml

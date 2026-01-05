@@ -1,0 +1,37 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- These packages are used in all test projects -->
+  <ItemGroup>
+    <!-- <PackageReference Include="xunit" />
+    <PackageReference Include="NSubstitute" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="AutoFixture" /> -->
+  </ItemGroup>
+
+  <!-- Add additional analyzers for test projects -->
+  <ItemGroup>
+    <!-- <PackageReference Include="xunit.analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NSubstitute.Analyzers.CSharp">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="FluentAssertions.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference> -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- <Using Include="FluentAssertions" />
+    <Using Include="Xunit" />
+    <Using Include="Xunit.Abstractions" />
+    <Using Include="Xunit.Sdk" />
+    <Using Include="AutoFixture" />
+    <Using Include="NSubstitute" /> -->
+  </ItemGroup>
+</Project>

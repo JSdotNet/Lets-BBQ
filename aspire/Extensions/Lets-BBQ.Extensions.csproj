@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+		<PackageReference Include="Aspire.Hosting" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<NoWarn>
+			ASPIREINTERACTION001;
+			ASPIREPIPELINES001;
+			ASPIREPIPELINES004;
+		</NoWarn>
+	</PropertyGroup>
+
+</Project>

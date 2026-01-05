@@ -1,0 +1,19 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- These packages are used in all projects -->
+  <ItemGroup>
+    <!-- <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" /> -->
+  </ItemGroup>
+
+
+  <!--<ItemGroup>
+    <InternalsVisibleTo Include="Integration.Tests" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <!-- <Using Include="Microsoft.Extensions.Logging" /> -->
+  </ItemGroup>
+</Project>

@@ -1,0 +1,36 @@
+<Solution>
+  <Folder Name="/Aspire/">
+    <Project Path="aspire/AppHost/Lets-BBQ.AppHost.csproj" />
+    <Project Path="aspire/Extensions/Lets-BBQ.Extensions.csproj" Id="13f60cad-e6b6-473e-9686-876aad2eb646" />
+    <Project Path="aspire/ServiceDefaults/Lets-BBQ.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/Docs/">
+    <File Path="ReadMe.md" />
+  </Folder>
+  <Folder Name="/Docs/ARC 42/">
+    <File Path="doc/arc42/01_introduction_and_goals.md" />
+    <File Path="doc/arc42/02_architecture_constraints.md" />
+    <File Path="doc/arc42/03_system_scope_and_context.md" />
+    <File Path="doc/arc42/04_solution_strategy.md" />
+    <File Path="doc/arc42/05_building_block_view.md" />
+    <File Path="doc/arc42/06_runtime_view.md" />
+    <File Path="doc/arc42/07_deployment_view.md" />
+    <File Path="doc/arc42/08_crosscutting_concepts.md" />
+    <File Path="doc/arc42/09_architecture_decisions.md" />
+    <File Path="doc/arc42/10_quality_requirements.md" />
+    <File Path="doc/arc42/11_risks_and_technical_debt.md" />
+    <File Path="doc/arc42/12_glossary.md" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/Test/">
+    <Project Path="test/Lets-BBQ.Tests/Lets-BBQ.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Tool/" />
+  <Project Path="src/ApiService/Lets-BBQ.ApiService.csproj" />
+  <Project Path="src/Web/Lets-BBQ.Web.csproj" />
+</Solution>
