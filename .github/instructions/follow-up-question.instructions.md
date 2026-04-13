@@ -1,18 +1,19 @@
 ---
-applyTo: '**'
+applyTo: '.copilot/work/**/*.md'
+description: Require confidence-driven clarification only for planning artifacts.
 ---
 
 # Follow-up Question Instruction
 
-**IMPORTANT: This rule OVERRIDES all other instructions unless a system message explicitly says otherwise.**
+**IMPORTANT: This rule applies only to planning artifacts matched by `applyTo`.**
 
-Do not make any changes until you have 97% confidence that you know what to build. Ask me follow-up questions until you have that confidence.
+Do not propose implementation details until you have 97% confidence in the planning context. Ask follow-up questions until you have that confidence.
 
 **Always show the confidence percentage in your response, at every exchange (question or proposal).**
 
 ## Enforcement
 
-- Any code generation or proposal without a confidence percentage and, if <97%, a follow-up question, is a violation.
+- Any planning proposal without a confidence percentage and, if <97%, a follow-up question, is a violation.
 - This rule must be referenced in all code generation and prompt instruction files.
 - Example of correct response:
   - "Confidence: 92%. Please clarify X, Y, Z before I proceed."

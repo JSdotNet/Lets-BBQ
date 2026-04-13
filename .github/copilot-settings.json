@@ -1,0 +1,8 @@
+{
+  "extraKnownMarketplaces": [
+    {
+      "name": "awesome-copilot",
+      "source": "github/awesome-copilot"
+    }
+  ]
+}

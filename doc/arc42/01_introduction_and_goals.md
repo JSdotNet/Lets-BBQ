@@ -1,91 +1,51 @@
-[back to index](../README.md)
+[back to index](../ARC42.md)
 
 # Introduction and Goals
 
->Describes the relevant requirements and the driving forces that software
->architects and development team must consider. These include
->
->* underlying business goals,
->* essential features,
->* essential functional requirements,
->* quality goals for the architecture and
->* relevant stakeholders and their expectations
+## 1.1 Requirements Overview
 
-## Requirements Overview
+**System Purpose:**
+Lets BBQ (working title) helps friend groups organize BBQ events by centralizing scheduling, logistics, and contribution tracking in a single collaborative space.
 
->Short description of the functional requirements, driving forces,
->extract (or abstract) of requirements. Link to (hopefully existing)
->requirements documents (with version number and information where to
->find it).
+### Essential Features
 
-### Motivation
+- Schedule BBQ events by proposing and finalizing date/time slots.
+- Capture and share the event location plus practical notes (parking, indoor backup, etc.).
+- Assign responsibilities so organizers and guests know who brings each item.
+- Track shared costs and equalize expenses across attendees.
+- Offer cut-specific cooking guides and recipe suggestions tailored to the planned menu.
 
->From the point of view of the end users a system is created or modified
->to improve support of a business activity and/or improve the quality.
+### Business Context
 
-### Form
+The application targets casual organizers who repeatedly juggle messaging threads, spreadsheets, and payment apps to coordinate BBQs. Consolidating decisions (when, where, what to bring, and how to split costs) reduces planning overhead, improves guest engagement, and ensures every gathering runs smoothly with balanced contributions.
 
->Short textual description, probably in tabular use-case format. If
->requirements documents exist this overview should refer to these
->documents.
->
->Keep these excerpts as short as possible. Balance readability of this
->document with potential redundancy w.r.t to requirements documents.
->
->See [Introduction and Goals](https://docs.arc42.org/section-1/) in the arc42 documentation.
+### References
 
-## Quality Goals
+- Requirements Document: None yet (TBD) – no formal requirements specification is available.
 
->### Contents
->
->The top three (max five) quality goals for the architecture whose
->fulfillment is of highest importance to the major stakeholders. We
->really mean quality goals for the architecture. Don’t confuse them with
->project goals. They are not necessarily identical.
->
->Consider this overview of potential topics (based upon the ISO 25010
->standard):
->
->![Categories of Quality Requirements](images/01_2_iso-25010-topics-EN.drawio.png)
->
->### Motivation
->
->You should know the quality goals of your most important stakeholders,
->since they will influence fundamental architectural decisions. Make sure
->to be very concrete about these qualities, avoid buzzwords. If you as an
->architect do not know how the quality of your work will be judged…
->
->### Form
->
->A table with quality goals and concrete scenarios, ordered by priorities
+---
 
-## Stakeholders
+## 1.2 Quality Goals
 
->### Contents
->
->Explicit overview of stakeholders of the system, i.e. all person, roles
->or organizations that
->
->* should know the architecture
->* have to be convinced of the architecture
->* have to work with the architecture or with code
->* need the documentation of the architecture for their work
->* have to come up with decisions about the system or its development
->
->### Motivation
->
->You should know all parties involved in development of the system or
->affected by the system. Otherwise, you may get nasty surprises later in
->the development process. These stakeholders determine the extent and the
->level of detail of your work and its results.
->
->### Form
->
->Table with role names, person names, and their expectations with respect
->to the architecture and its documentation.
->
->|Role/Name|Contact|Expectations
->|:--|:--|:--
->|||
->|||
->|||
+| Priority | Quality Goal | Concrete Scenario |
+|:--------:|-------------|-------------------|
+| **1** | #reliable — Always-accessible event info | Maintain 99.5% monthly uptime for organizer and guest actions (scheduling, RSVPs, contribution updates), excluding planned maintenance windows announced 24 hours in advance. |
+| **2** | #efficient — Snappy interactions | Keep p95 response times under 250 ms for core API calls (load event dashboard, submit RSVP, update contribution) with up to 500 concurrent users, verified via load tests before each release. |
+| **3** | #efficient/#operable — Cost-aware hosting | Limit average hosting expenses to under EUR 40 per month for up to 1,000 monthly active users by leveraging free tiers and suspending idle background jobs within 15 minutes of inactivity. |
+
+⚠️ These goals remain pending formal approval from organizer and guest representatives and must be referenced by the detailed scenarios planned for Section 10.
+
+---
+
+## 1.3 Stakeholders
+
+| Role/Name | Contact | Expectations from Architecture/Documentation |
+|-----------|---------|----------------------------------------------|
+| Organizer (Event Host) | N/A (role-based) | Needs clarity on how the system supports planning, communication, and cost tracking so events stay coordinated. |
+| Invited Guest | N/A (role-based) | Expects transparent access to event details, contributions, and preparation guidance with minimal friction. |
+| Developer / Architecture Owner (JSdotNet) | N/A (internal) | Requires stable architectural decisions, documented quality goals, and traceability for future enhancements. |
+
+### Stakeholder Categories
+
+- **End Users:** Organizers and invited guests rely on the app for accurate schedules, locations, and contribution visibility.
+- **Development Team:** Sole developer (JSdotNet) maintains architecture consistency, captures decisions, and ensures future contributors can onboard quickly.
