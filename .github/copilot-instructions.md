@@ -40,3 +40,7 @@ You can also use `dotnet watch test` to run the tests automatically when you cha
 4. Fix any compiler warnings and errors before going to the next step.
 
 When you see paths like `/[project]/features/[feature]/` in rules, replace [project] with the name of the project you are working on (e.g. `Ordering`), and `[feature]` with the name of the feature you are working on (e.g. `VerifyOrAddPayment`).
+
+## Pull Request Creation
+
+When creating a pull request in this repository, always invoke the `pr-jsdotnet` skill (`.github/skills/pr-jsdotnet/SKILL.md`) instead of the built-in PR creation tool, so the PR is authored using JSdotNet organization credentials via `gh pr create`.

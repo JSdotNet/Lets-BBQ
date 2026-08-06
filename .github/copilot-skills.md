@@ -64,6 +64,7 @@ Track skill provenance and avoid duplicate local skills when plugin-provided ski
 | `playwright-automation-fill-in-form` | Local: `.github/skills` (copied from awesome-copilot collection) | Automates form interactions using Playwright tooling. |
 | `playwright-explore-website` | Plugin: `testing-automation` | Explores website flows and captures Playwright automation paths. |
 | `playwright-generate-test` | Plugin: `testing-automation` | Generates Playwright test cases from observed user flows. |
+| `pr-jsdotnet` | Local: `.github/skills` (copied from `plugins/copilot-app/skills/pr-jsdotnet/SKILL.md`) | Creates GitHub Pull Requests in JSdotNet repositories via `gh` CLI using JSdotNet credentials; auto-invoked for PR creation in this repo. |
 | `prompt-builder` | Local: `.github/skills` (copied from awesome-copilot collection) | Builds high-quality Copilot prompts with structured guidance. |
 | `refactor` | Local: `.github/skills` (copied from awesome-copilot collection) | Performs behavior-preserving code refactoring improvements. |
 | `refactor-method-complexity-reduce` | Local: `.github/skills` (copied from awesome-copilot collection) | Reduces method complexity by extracting focused helper methods. |
