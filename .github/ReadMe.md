@@ -47,6 +47,7 @@ I have the concept, early specs, and instruction-writing workflow defined; next 
 - [TODO: Link to the in-repo ARC42 documentation once the first draft lands.]
 - [TODO: Link to markdown write-ups that explain sub-results, experiments, or blog-style findings.]
 - [Copilot Plugins Tracker](./copilot-plugins.md)
+- [Copilot Model Selection](./copilot-model-selection.md)
 
 ## 🛠️ Tech Stack
 
