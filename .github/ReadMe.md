@@ -30,21 +30,22 @@ flowchart LR
 
 ## 🧭 Current Status & Roadmap
 
-I have the concept, early specs, and instruction-writing workflow defined; next up is turning that intent into working slices of the app.
+**On hold.** The repository holds the Aspire starter solution (an API service and a Blazor web front end), the first arc42 chapter, and the original Copilot agents and instruction files.
 
-- **Now**
-  - Locking in the clean template plus repo instructions.
-  - Drafting ARC42 context and solution strategy sections.
-  - Pinning down domain boundaries and module seams.
+The AI workflow this project set out to prove has since moved into its own repositories, where it is used day to day:
 
-- **Next**
-  - Mapping domains into a modular-monolith skeleton, including allowed module dependency routes.
-  - Generate the first API + UI slice via Copilot using the finalized instructions.
-  - Wire up Aspire resources that back each module capability and surface dependency telemetry.
+- [devbook](https://github.com/JSdotNet/devbook): the devbook convention, the delivery flows, and the scheduled routines for Claude Code and GitHub Copilot.
+- [ai-plugins](https://github.com/JSdotNet/ai-plugins): the specialist agents and skills, the successor to the Copilot assets in `.github/`.
+
+When work here resumes, the plan is unchanged:
+
+- Draft the remaining arc42 sections and pin down domain boundaries and module seams.
+- Map the domains into a modular-monolith skeleton, including allowed module dependency routes.
+- Build the first API + UI slice and wire up the Aspire resources behind each module.
 
 ## 📚 Docs & Deep Dives
 
-- [TODO: Link to the in-repo ARC42 documentation once the first draft lands.]
+- [ARC42 documentation](../doc/ARC42.md) (chapter 1 drafted, the rest are placeholders)
 - [TODO: Link to markdown write-ups that explain sub-results, experiments, or blog-style findings.]
 - [Copilot Plugins Tracker](./copilot-plugins.md)
 - [Copilot Model Selection](./copilot-model-selection.md)
